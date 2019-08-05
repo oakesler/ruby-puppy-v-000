@@ -21,8 +21,8 @@ class Dog
   end
   
   def self.print_all
-    binding.pry
     @@names
+    binding.pry
   end
 
   def self.clear_all
