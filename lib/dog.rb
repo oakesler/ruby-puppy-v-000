@@ -11,7 +11,7 @@ class Dog
     @@names << self.name
     self.save
   end
-  binding.pry 
+  
   def save
     @@all << self
   end
@@ -21,6 +21,7 @@ class Dog
   end
   
   def self.print_all
+    binding.pry
     @@names
   end
 
