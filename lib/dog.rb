@@ -6,14 +6,12 @@ class Dog
   
   attr_accessor :name
   
-  binding.pry
-  
   def initialize(name)
     @name = name
     @@names << self.name
     self.save
   end
-  
+  binding.pry 
   def save
     @@all << self
   end
