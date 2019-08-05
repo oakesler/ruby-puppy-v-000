@@ -10,8 +10,9 @@ class Dog
     self.save
   end
   
-  def names 
-    if @@names.include?(@name) == false
+  def names
+    @name = name
+    if @@names.include?(name) == false
       @@names << self.name
     end
   end
