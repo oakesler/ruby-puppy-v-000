@@ -1,20 +1,17 @@
+require "pry"
+
 class Dog 
   @@all = [ ]
   @@names = [ ]
   
   attr_accessor :name
   
+  binding.pry
+  
   def initialize(name)
     @name = name
-    #@@names << self.name
+    @@names << self.name
     self.save
-  end
-  
-  def names
-    @name = name
-    if @@names.include?(name) == false
-      @@names << self.name
-    end
   end
   
   def save
