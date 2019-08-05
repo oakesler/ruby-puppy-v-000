@@ -13,6 +13,7 @@ class Dog
   def names 
     if @@names.include?(@name) == false
       @@names << self.name
+    end
   end
   
   def save
