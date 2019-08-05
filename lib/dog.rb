@@ -7,9 +7,14 @@ class Dog
   def initialize(name)
     @name = name
     
-    @@names << self.name
+    #@@names << self.name
     
     self.save
+  end
+  
+  def names 
+    if @@names.include?(@name) == false
+      @@names << self.name
   end
   
   def save
@@ -21,19 +26,13 @@ class Dog
   end
   
   def self.print_all
-    names_list = [ ]
-    @@names.each do |thing|
-      if names_list.include?(thing) == false
-        names_list << "#{thing}"
-      end
-    #end
-  #puts names_list
-#end
-#end
+    @@names
+  end
 
   def self.clear_all
     @@all.clear
   end
+end
 
   #def self.print_all
     #names_list = [ ]
