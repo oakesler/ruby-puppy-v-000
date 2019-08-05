@@ -20,17 +20,28 @@ class Dog
     @@all
   end
   
-  def self.clear_all
-    @@all.clear
-  end
-  
   def self.print_all
     names_list = [ ]
     @@names.each do |thing|
-      if names_list.include?(thing) == false 
+      if names_list.include?(thing) == false
         names_list << "#{thing}"
       end
-    end
-  puts names_list
-end
-end
+    #end
+  #puts names_list
+#end
+#end
+
+  def self.clear_all
+    @@all.clear
+  end
+
+  #def self.print_all
+    #names_list = [ ]
+    #@@names.each do |thing|
+      #if names_list.include?(thing) == false 
+        #names_list << "#{thing}"
+      #end
+    #end
+  #puts names_list
+#end
+#end
